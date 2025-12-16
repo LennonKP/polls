@@ -1,0 +1,30 @@
+meta {
+  name: Vote
+  type: http
+  seq: 9
+}
+
+post {
+  url: http://localhost:3000/polls/:pollId/votes
+  body: json
+  auth: bearer
+}
+
+params:path {
+  pollId: 019b000b-5e14-7000-b84a-a9ef1d4e4d9c
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "optionId": "019b000b-5e14-7000-b84a-option-id"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

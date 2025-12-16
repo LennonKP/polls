@@ -1,0 +1,31 @@
+meta {
+  name: Extend Poll
+  type: http
+  seq: 8
+}
+
+patch {
+  url: http://localhost:3000/polls/:pollId/extend
+  body: json
+  auth: bearer
+}
+
+params:path {
+  pollId: 019b000b-5e14-7000-b84a-a9ef1d4e4d9c
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "endAt": "2025-12-31T23:59:59Z",
+    "expectedVotes": 200
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

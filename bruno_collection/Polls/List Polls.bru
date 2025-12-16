@@ -1,0 +1,29 @@
+meta {
+  name: List Polls
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://localhost:3000/polls?page=1&limit=10
+  body: none
+  auth: bearer
+}
+
+params:query {
+  page: 1
+  limit: 10
+  ~category: tech
+  ~status: open
+  ~minVotes: 0
+  ~maxVotes: 100
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwMTliMDAwYS1lZDgzLTcwMDAtYjRjZC1iYTEwOTkzOGRhODYiLCJpYXQiOjE3NjU4NTQzNTQsImV4cCI6MTc2NTk0MDc1NH0.2V5Q7RkBnheKhiggksqRfzvWE--wPexq3Xrg7kVSNZg
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

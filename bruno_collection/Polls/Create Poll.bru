@@ -1,0 +1,37 @@
+meta {
+  name: Create Poll
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/polls
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwMTliMDAwYS1lZDgzLTcwMDAtYjRjZC1iYTEwOTkzOGRhODYiLCJpYXQiOjE3NjUyMzIzMjcsImV4cCI6MTc2NTMxODcyN30.qgQxso0VEwfNbtndYIHl082u3xWDl4DkHFpe6L-KnEE
+}
+
+body:json {
+  {
+    "title": "pokepool",
+    "description": "qual o melhor inicial",
+    "alternatives": [
+      {"text": "bulbasaur"},
+      {"text": "squirtle"},
+      {"text": "charmander"}
+    ],
+    "visibility": "public",
+    "startAt": "2025-12-09T22:22:19.253Z",
+    "expectedVotes": 90
+  }
+  
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
