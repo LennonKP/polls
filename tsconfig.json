@@ -23,6 +23,6 @@
     /* Bun Specifics */
     "types": ["bun"]
   },
-  "include": ["src/**/*", "tests/**/*", "**/*.ts"],
+  "include": ["src/**/*", "tests/**/*", "**/*.ts", "tests"],
   "exclude": ["node_modules", "dist"]
 }
