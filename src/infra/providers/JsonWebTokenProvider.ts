@@ -2,7 +2,7 @@ import { sign, verify } from 'jsonwebtoken';
 import { JwtProvider } from '@/application/ports/JwtProvider';
 
 export class JsonWebTokenProvider implements JwtProvider {
-  private secret = process.env.JWT_SECRET || 'default-secret-change-in-production';
+  private secret = process.env.JWT_SECRET!;
 
   async sign(payload: object): Promise<string> {
     return sign(payload, this.secret, { expiresIn: '1d' });
