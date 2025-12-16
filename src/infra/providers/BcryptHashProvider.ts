@@ -1,7 +1,7 @@
 import { HashProvider } from '@/application/ports/HashProvider';
 import { hash, compare } from 'bcrypt';
 
-export default class BcryptHashProvider implements HashProvider {
+export class BcryptHashProvider implements HashProvider {
     private readonly salt: number;
 
     constructor(salt?: number) {

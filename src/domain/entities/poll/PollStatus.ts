@@ -1,0 +1,1 @@
+export type PollStatus = "open" | "closed" | "scheduled";
