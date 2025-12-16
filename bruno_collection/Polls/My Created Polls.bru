@@ -7,16 +7,12 @@ meta {
 get {
   url: http://localhost:3000/me/polls/created?page=1&limit=10
   body: none
-  auth: bearer
+  auth: inherit
 }
 
 params:query {
   page: 1
   limit: 10
-}
-
-auth:bearer {
-  token: {{token}}
 }
 
 settings {
