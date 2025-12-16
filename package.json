@@ -7,7 +7,7 @@
     "dev": "bun run src/infra/http/server.ts",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
-    "test": "jest"
+    "test": "bun test"
   },
   "keywords": [],
   "author": "",
