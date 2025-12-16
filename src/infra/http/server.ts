@@ -4,18 +4,12 @@ import { pollRoutes } from "./routes/poll";
 import { voteRoutes } from "./routes/vote";
 import { meRoutes } from "./routes/me";
 
-const server = Fastify({
-    logger: true,
-});
+const server = Fastify();
 
 server.register(authRoutes, { prefix: "/auth" });
 server.register(pollRoutes, { prefix: "/polls" });
 server.register(voteRoutes, { prefix: "/polls" });
 server.register(meRoutes, { prefix: "/me" });
-
-server.get("/health", async () => {
-    return { status: "ok" };
-});
 
 const start = async () => {
     try {
